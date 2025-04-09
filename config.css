@@ -18,6 +18,8 @@ h1 {
     height: 70px;
     display: flex;
     justify-content: flex-end;
+    overflow-x: auto;
+    white-space: nowrap;
     align-items: center;
     padding: 5px;
     margin: 2px;

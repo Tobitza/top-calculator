@@ -21,6 +21,8 @@ const operators = {
     "/": (a, b) => a / b
 };
 
+const operatorsIds = ["calculator-add", "calculator-subtract", "calculator-multiply", "calculator-divide"];
+
 // Logic based on the input
 function buttonTester (button) {
     value = button.textContent;
@@ -37,6 +39,7 @@ function buttonTester (button) {
         operator = value;
         display.textContent = "";
         console.log(operand1);
+        document.getElementById(operatorsIds).disabled = true;
     }
     else if (value === "=") {
         operand2 = display.textContent;
@@ -56,7 +59,7 @@ function clear () {
 
 function operate (op1, operator, op2) {
     const result = operators[operator](parseFloat(op1), parseFloat(op2));
-    return result;
+    return Math.round(result *1000000) / 1000000;
 };
 
 // TODO:
