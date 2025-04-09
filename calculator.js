@@ -21,8 +21,6 @@ const operators = {
     "/": (a, b) => a / b
 };
 
-const operatorsIds = ["calculator-add", "calculator-subtract", "calculator-multiply", "calculator-divide"];
-
 // Logic based on the input
 function buttonTester (button) {
     value = button.textContent;
@@ -39,7 +37,6 @@ function buttonTester (button) {
         operator = value;
         display.textContent = "";
         console.log(operand1);
-        document.getElementById(operatorsIds).disabled = true;
     }
     else if (value === "=") {
         operand2 = display.textContent;
